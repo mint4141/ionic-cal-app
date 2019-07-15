@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  result : String;
   constructor(private http:HttpClient) {
 
   }
@@ -19,8 +19,10 @@ export class HomePage {
     let first =  parseInt(a);
     let second =  parseInt(b);
   
-    let response = await this.http.post(url,{ "first" :first , "second":second}).toPromise();
+    let response = await<any> this.http.post(url,{ "first" :first , "second":second}).toPromise();
     console.log(response);
+
+    this.result = response.result
   }
 }
 
