@@ -13,7 +13,11 @@ export class HomePage {
   }
 
   calculator(a,b){
-    console.log('ตัวตั้ง',a,'ตัวบวก',b)
+    console.log('ตัวตั้ง',a,'ตัวบวก',b);
+    
+    let url = "https://nextflow-node-calculator-api.azurewebsites.net/calculator"
+  
+
   }
 }
 
