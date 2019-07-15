@@ -12,12 +12,12 @@ export class HomePage {
 
   }
 
-  calculator(a,b){
+  async calculator(a,b){
     console.log('ตัวตั้ง',a,'ตัวบวก',b);
     
     let url = "https://nextflow-node-calculator-api.azurewebsites.net/calculator"
   
-
+    let response = await this.http.post(url,{}).toPromise();
   }
 }
 
